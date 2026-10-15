@@ -1,0 +1,37 @@
+% Sprache der Arbeit: ngerman oder english
+\documentclass[ngerman]{hsbi-arbeit}
+
+% ---------- Angaben für das Titelblatt ----------
+\title{Titel der Arbeit}
+\author{Vorname Nachname}
+\matrikelnummer{1234567}
+\arbeitstyp{Masterarbeit}% oder: Hausarbeit
+\studiengang{Masterstudiengang Wirtschaftsinformatik --\\Master of Science (M.\,Sc.)}
+\einrichtung{am Fachbereich Wirtschaft\\der Hochschule Bielefeld}
+\semester{Wintersemester 2026/27}
+\erstpruefer{Prof.~Dr. Vorname Nachname}
+\zweitpruefer{Prof.~Dr. Vorname Nachname}% bei Hausarbeiten löschen
+
+\addbibresource{literatur.bib}
+\input{abkuerzungen}
+
+\begin{document}
+\maketitle
+\input{abstract}% bei Hausarbeiten löschen
+
+\verzeichnisteil
+\tableofcontents
+\listoffigures% Leitfaden: nur bei mehr als drei Abbildungen
+\listoftables% Leitfaden: nur bei mehr als drei Tabellen
+\lstlistoflistings
+\printacronyms
+
+\hauptteil
+\input{kapitel/01-einleitung}
+\input{kapitel/02-grundlagen}
+
+\schlussteil
+\printbibliography[heading=bibintoc]
+\input{anhang}
+\erklaerung
+\end{document}

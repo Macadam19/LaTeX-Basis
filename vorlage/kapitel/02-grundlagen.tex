@@ -1,0 +1,44 @@
+\chapter{Grundlagen}
+\label{kap:grundlagen}
+
+Dieses Kapitel zeigt Abbildungen, Tabellen und Quellcode.
+
+\section{Abbildungen und Tabellen}
+
+Abbildungen werden zentriert, die Beschriftung steht darunter. Bei übernommenen
+Abbildungen steht die Quelle in einer Fußnote am Ende der Beschriftung.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[width=0.5\textwidth]{example-image}
+  \caption[Beispiel für eine Abbildung]{Beispiel für eine
+    Abbildung\protect\footnotemark}
+  \label{abb:beispiel}
+\end{figure}
+\footnotetext{Entnommen aus \textcite[17]{mustermann2023}.}
+
+Bei Tabellen steht die Beschriftung darüber.
+
+\begin{table}[htb]
+  \caption{Beispiel für eine Tabelle}
+  \label{tab:beispiel}
+  \centering
+  \begin{tabular}{lrr}
+    \hline
+    Kennzahl & 2025 & 2026 \\
+    \hline
+    Umsatz in Mio.~€ & 12,4 & 13,1 \\
+    Mitarbeitende & 85 & 92 \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\section{Quellcode}
+
+Programmcode wird immer als Text gesetzt, nie als Bildschirmfoto.
+
+\begin{lstlisting}[language=Python, caption={Beispiel für Quellcode}, label=lst:beispiel]
+def umsatz_wachstum(alt: float, neu: float) -> float:
+    """Wachstum in Prozent."""
+    return (neu - alt) / alt * 100
+\end{lstlisting}
