@@ -96,11 +96,15 @@
 \newcommand*{\zweitpruefer}[1]{\def\hsbi@zweitzeile{\\\zweitpruefername: & #1}}
 \let\hsbi@zweitzeile\@empty
 
+% Doppellinie über die Textbreite: #1 = obere, #2 = untere Linienstärke
+\newcommand*{\hsbi@doppellinie}[2]{\hrule height #1\kern 2pt\hrule height #2}
+
 \renewcommand*{\maketitle}{%
   \begin{titlepage}
-    \centering\large
-    \rule{\textwidth}{0.4pt}\par
-    \@title\par
+    \centering\large\singlespacing\setlength{\parskip}{0pt}% Zeilen eines Blocks eng
+    \hsbi@doppellinie{1.6pt}{0.4pt}
+    \vspace{2\baselineskip}
+    {\Large\bfseries\@title\par}
     \vspace{\stretch{2}}
     \hsbi@arbeitstyp\par
     \vorgelegtvonname\par
@@ -113,11 +117,12 @@
     \bigskip\bigskip
     \hsbi@semester\par
     \vspace{\stretch{3}}
-    {\small\singlespacing
-     \begin{tabular}{@{}ll@{}}
-       \ifx\hsbi@zweitzeile\@empty\pruefername\else\erstpruefername\fi:
-         & \hsbi@erstpruefer\hsbi@zweitzeile
-     \end{tabular}\par}
+    \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+      \ifx\hsbi@zweitzeile\@empty\pruefername\else\erstpruefername\fi:
+        & \hsbi@erstpruefer\hsbi@zweitzeile
+    \end{tabular*}\par
+    \vspace{\baselineskip}
+    \hsbi@doppellinie{0.4pt}{1.6pt}
   \end{titlepage}}
 
 % ---------- Literatur: Harvard (Autor-Jahr) ----------

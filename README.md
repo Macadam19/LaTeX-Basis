@@ -44,5 +44,6 @@ Das [hochschulweite Formular](https://www.hsbi.de/pruefungsangelegenheiten/hochs
 
 ## Abweichungen vom Word-Muster
 
+- Das Titelblatt hat oben und unten eine Doppellinie und einen fetten Titel. Die Prüferangaben gehen über die volle Breite.
 - Der Textteil beginnt bei Seite 1. Das Word-Muster zählt nach den römischen Seiten weiter (ab 6).
 - Im Literaturverzeichnis steht das Jahr nach dem Namen (Harvard). Das Muster im Leitfaden gehört zur Fußnoten-Zitierweise.
